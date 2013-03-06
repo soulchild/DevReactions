@@ -15,10 +15,10 @@ WriteMakefile(
         'ExtUtils::MakeMaker' => 0,
     },
     BUILD_REQUIRES => {
-    },
-    PREREQ_PM => {
         'XML::Feed'         => 0,
         'Plack'             => 0,
+    },
+    PREREQ_PM => {
     },
     dist  => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
     clean => { FILES => 'App-DevReactions-*' },

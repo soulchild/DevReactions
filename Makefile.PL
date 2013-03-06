@@ -1,4 +1,4 @@
-use 5.006;
+use 5.008;
 use strict;
 use warnings FATAL => 'all';
 use inc::Module::Install;
@@ -8,16 +8,14 @@ all_from 'lib/App/DevReactions.pm';
 author   q{Tobi Kremer <tobias@funkreich.de>};
 license  'artistic2';
 
-perl_version 5.006;
+perl_version 5.008;
 
-tests_recursive('t');
+# tests_recursive('t');
 
 resources (
-   #homepage   => 'http://yourwebsitehere.com',
-   #IRC        => 'irc://irc.perl.org/#App-DevReactions',
-   license    => 'http://www.perlfoundation.org/artistic_license_2_0',
-   #repository => 'git://github.com/Tobi Kremer/App-DevReactions.git',
-   bugtracker => 'http://rt.cpan.org/NoAuth/Bugs.html?Dist=App-DevReactions',
+    homepage     => 'https://github.com/soulchild',
+    repository   => 'https://github.com/soulchild/DevReactions.git',
+    license      => 'http://www.perlfoundation.org/artistic_license_2_0',
 );
 
 configure_requires (
@@ -25,12 +23,12 @@ configure_requires (
 );
 
 build_requires (
-   'Test::More' => 0,
+    # 'Test::More' => 0,
 );
 
 requires (
-   #'ABC'              => 1.6,
-   #'Foo::Bar::Module' => 5.0401,
+    'XML::Feed'  => 0,
+    'Plack'      => 0,
 );
 
 install_as_cpan;

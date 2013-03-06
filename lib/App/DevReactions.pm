@@ -9,7 +9,7 @@ our $VERSION = "0.01";
 
 =head1 NAME
 
-App::DevReactions - watch dev reactions in fullscreen
+App::DevReactions - Watch dev reactions animated GIFs in fullscreen
 
 =head1 VERSION
 
@@ -40,7 +40,9 @@ my $feeds = [
 
 =head1 DESCRIPTION
 
-Love the animated gifs from sites like devopsreactions and thecodinglove? This app lets you view them randomly in full screen mode in your browser.
+Love the animated GIFs from sites like devopsreactions and thecodinglove? 
+
+This app lets you view them randomly in full screen mode in your browser.
 
 =cut
 

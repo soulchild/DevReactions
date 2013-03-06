@@ -6,10 +6,11 @@ This little Perl app fetches those feeds and displays the GIFs in a random order
 
 ## Installation
 
+Do yourself a favor and install [cpanm](https://metacpan.org/module/App::cpanminus#INSTALLATION), then it's as easy as:
+
 ```bash
 perl Makefile.PL
-make
-make installdeps
+cpanm --installdeps .
 plackup
 ```
 

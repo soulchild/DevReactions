@@ -12,4 +12,4 @@ make
 plackup
 ```
 
-Fire up your browser and go to: (http://localhost:5000). Enjoy!
+Fire up your browser and go to: [http://localhost:5000](http://localhost:5000). Enjoy!

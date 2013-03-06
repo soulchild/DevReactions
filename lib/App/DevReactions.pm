@@ -1,8 +1,6 @@
 package App::DevReactions;
 
-use v5.012;
 use utf8;
-
 use URI;
 use Encode;
 use XML::Feed;

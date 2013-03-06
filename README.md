@@ -5,6 +5,7 @@ Love the animated gifs from devopsreaction.com and thecodinglove.com? This littl
 ## Installation
 
 ```bash
-cpanm Plack XML::Feed
+perl Makefile.PL
+make
 plackup
 ```

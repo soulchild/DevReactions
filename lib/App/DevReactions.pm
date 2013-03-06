@@ -7,6 +7,8 @@ use URI;
 use Encode;
 use XML::Feed;
 
+our $VERSION = "0.01";
+
 =head1 NAME
 
 App::DevReactions - watch dev reactions in fullscreen
@@ -76,81 +78,76 @@ sub load_reactions {
 my $requests    = 0;
 my $reactions   = [];
 
-my $app = sub {
-    my $env = shift;
+sub app {
+    return sub {
+        my $env = shift;
 
-    # Reload feeds every 100 requests
-    $reactions = load_reactions() if $requests++ % 100 == 0;
+        # Reload feeds every 100 requests
+        $reactions = load_reactions() if $requests++ % 100 == 0;
 
-    # Grab a random reaction
-    my $rand = int( rand( scalar @{ $reactions } ) );
-    my $reaction = $reactions->[ $rand ];
+        # Grab a random reaction
+        my $rand = int( rand( scalar @{ $reactions } ) );
+        my $reaction = $reactions->[ $rand ];
 
-    my $body = sprintf( <<EOF, $reaction->{ 'url' }, $rand, scalar @$reactions, $reaction->{ 'title' }, $feeds->[ $reaction->{ 'feed_id' } ]->{ 'name' }, $reaction->{ 'image' } );
-<!doctype html>
-<html>
-    <head>
-        <title>DevReactions</title>
-        <style type="text/css">
-            body {
-                margin:auto; 
-                background:#000; 
-                font-family:Helvetica, Arial, sans-serif; 
-                color:white;
-                font-smoothing: antialiased;
-                -webkit-font-smoothing: antialiased;
-                text-renderuse Plack::App::File;
-  my $app = Plack::App::File->new(root => "/path/to/htdocs")->to_app;
-
-  # Or map the path to a specific file
-  use Plack::Builder;
-  builder {
-      mount "/favicon.ico" => Plack::App::File->new(file => '/path/to/favicon.ico');
-  };ing: optimizeLegibility;
-            }
-            header {
-                position:absolute; 
-                margin:0; 
-                background:rgba(0,0,0,.6); 
-                padding:12px 16px; 
-                top:0; 
-                left:0;
-            }
-            h1, h2 {
-                margin:0;
-            }
-            h2 {
-                font-weight:normal;
-            }
-            article img {
-                border:none;
-                height:100%;
-                min-height:100%;
-                max-width:100%;
-            }
-            a, a:link, a:visited, a:hover {
-                color:white;
-                text-decoration:none;
-            }
-        </style>
-        <meta http-equiv="refresh" content="10; URL=/">
-    </head>
-    <body>
-        <header>
-            <a href="%s">
-                <h1>%d/%d: %s</h1>
-                <h2>from %s</h2>
-            </a>
-        </header>
-        <article>
-            <img src="%s">
-        </article>
-        <a href="https://github.com/soulchild"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
-    </body>
-</html>
+        my $body = sprintf( <<EOF, $reaction->{ 'url' }, $rand, scalar @$reactions, $reaction->{ 'title' }, $feeds->[ $reaction->{ 'feed_id' } ]->{ 'name' }, $reaction->{ 'image' } );
+    <!doctype html>
+    <html>
+        <head>
+            <title>DevReactions</title>
+            <style type="text/css">
+                body {
+                    margin:auto; 
+                    background:#000; 
+                    font-family:Helvetica, Arial, sans-serif; 
+                    color:white;
+                    font-smoothing: antialiased;
+                    -webkit-font-smoothing: antialiased;
+                    text-rendering: optimizeLegibility;
+                }
+                header {
+                    position:absolute; 
+                    margin:0; 
+                    background:rgba(0,0,0,.6); 
+                    padding:12px 16px; 
+                    top:0; 
+                    left:0;
+                }
+                h1, h2 {
+                    margin:0;
+                }
+                h2 {
+                    font-weight:normal;
+                }
+                article img {
+                    border:none;
+                    height:100%;
+                    min-height:100%;
+                    max-width:100%;
+                }
+                a, a:link, a:visited, a:hover {
+                    color:white;
+                    text-decoration:none;
+                }
+            </style>
+            <meta http-equiv="refresh" content="10; URL=/">
+        </head>
+        <body>
+            <header>
+                <a href="%s">
+                    <h1>%d/%d: %s</h1>
+                    <h2>from %s</h2>
+                </a>
+            </header>
+            <article>
+                <img src="%s">
+            </article>
+            <a href="https://github.com/soulchild"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+        </body>
+    </html>
 EOF
 
-    return [ 200, [], [ encode_utf8( $body ) ] ];
+        return [ 200, [], [ encode_utf8( $body ) ] ];
+    }
 };
 
 =head1 AUTHOR

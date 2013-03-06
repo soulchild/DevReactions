@@ -9,6 +9,7 @@ This little Perl app fetches those feeds and displays the GIFs in a random order
 ```bash
 perl Makefile.PL
 make
+make installdeps
 plackup
 ```
 

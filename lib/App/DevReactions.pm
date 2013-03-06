@@ -103,6 +103,7 @@ sub app {
                     font-smoothing: antialiased;
                     -webkit-font-smoothing: antialiased;
                     text-rendering: optimizeLegibility;
+                    overflow:hidden;
                 }
                 header {
                     position:absolute; 

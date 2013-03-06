@@ -14,4 +14,4 @@ cpanm --installdeps .
 plackup
 ```
 
-Fire up your browser and go to: [http://localhost:5000](http://localhost:5000). Enjoy!
+Fire up your browser and go to: [http://localhost:5000](http://localhost:5000). If you're using Google Chrome, hit cmd+Shift+F for full-screen mode. Enjoy! :)

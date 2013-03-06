@@ -1,6 +1,6 @@
 # DevReactions
 
-Love the animated GIFs from [DevOpsReaction](http://devopsreaction.com) and [TheCodingLove](http://thecodinglove.com)? 
+Love the animated GIFs from [DevOpsReaction](http://devopsreactions.tumblr.com) and [TheCodingLove](http://thecodinglove.com)? 
 
 This little Perl app fetches those feeds and displays the GIFs in a random order in fullscreen without any clutter.
 
@@ -12,4 +12,4 @@ make
 plackup
 ```
 
-Fire up your browser and go to: http://localhost:5000. Enjoy!
+Fire up your browser and go to: (http://localhost:5000). Enjoy!

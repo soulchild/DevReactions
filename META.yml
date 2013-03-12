@@ -1,0 +1,31 @@
+---
+abstract: 'watch dev reactions in fullscreen'
+author:
+  - 'Tobi Kremer, C<< <tobias at funkreich.de> >>'
+  - 'Tobi Kremer <tobias@funkreich.de>'
+build_requires:
+  ExtUtils::MakeMaker: 6.59
+  Test::More: 0
+configure_requires:
+  ExtUtils::MakeMaker: 6.59
+  Module::Install: 0
+distribution_type: module
+dynamic_config: 1
+generated_by: 'Module::Install version 1.06'
+license: artistic2
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: App-DevReactions
+no_index:
+  directory:
+    - inc
+    - t
+requires:
+  perl: 5.6.0
+  XML::Feed: 0
+  Plack: 1.0000
+resources:
+  bugtracker: http://rt.cpan.org/NoAuth/Bugs.html?Dist=App-DevReactions
+  license: http://www.perlfoundation.org/artistic_license_2_0
+version: 0.01

@@ -1,0 +1,55 @@
+{
+   "abstract" : "watch dev reactions in fullscreen",
+   "author" : [
+      "Tobi Kremer, C<< <tobias at funkreich.de> >>",
+      "Tobi Kremer <tobias@funkreich.de>"
+   ],
+   "dynamic_config" : 0,
+   "generated_by" : "Module::Install version 1.06, CPAN::Meta::Converter version 2.112150",
+   "license" : [
+      "artistic_2"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "App-DevReactions",
+   "no_index" : {
+      "directory" : [
+         "inc",
+         "t"
+      ]
+   },
+   "prereqs" : {
+      "build" : {
+         "requires" : {
+            "ExtUtils::MakeMaker" : "6.59",
+            "Module::Install" : 0,
+            "Test::More" : 0
+         }
+      },
+      "configure" : {
+         "requires" : {
+            "ExtUtils::MakeMaker" : "6.59",
+            "Module::Install" : 0
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "perl" : "5.006",
+            "XML::Feed" : 0,
+            "Plack" : "1.0000"
+         }
+      }
+   },
+   "release_status" : "stable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "http://rt.cpan.org/NoAuth/Bugs.html?Dist=App-DevReactions"
+      },
+      "license" : [
+         "http://www.perlfoundation.org/artistic_license_2_0"
+      ]
+   },
+   "version" : "0.01"
+}

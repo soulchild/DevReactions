@@ -28,7 +28,7 @@ build_requires (
 
 requires (
     'XML::Feed'  => 0,
-    'Plack'      => 0,
+    'Plack'      => '1.0000',
 );
 
 install_as_cpan;

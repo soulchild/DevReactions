@@ -7,6 +7,7 @@ use warnings;
 use URI;
 use Encode;
 use XML::Feed;
+use Plack::Request;
 
 our $VERSION = "0.01";
 
@@ -85,10 +86,10 @@ sub app {
     return sub {
         my $env = shift;
 
+        my $req = Plack::Request->new($env);
+        
         # 404 for all requests other than /
-        if( $env->{ REQUEST_URI } !~ /^\/$/ ) {
-            return [ 404, [], [] ];
-        }
+        return [ 404, [], [ 'Say whaaat?!' ] ] if $req->uri->path !~ /^\/$/;
 
         # Reload feeds every 100 requests
         $reactions = load_reactions() if $requests++ % 100 == 0;

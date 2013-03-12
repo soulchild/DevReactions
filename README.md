@@ -4,6 +4,8 @@ Love the animated GIFs from [DevOpsReaction](http://devopsreactions.tumblr.com) 
 
 This little Perl app fetches those feeds and displays the GIFs in a random order in fullscreen without any clutter.
 
+[Example (on Heroku)](http://devreactions.herokuapp.com/)
+
 ## Installation
 
 Do yourself a favor and install [cpanm](https://metacpan.org/module/App::cpanminus#INSTALLATION), then it's as easy as:

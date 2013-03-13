@@ -120,13 +120,14 @@ sub app {
                 text-rendering: optimizeLegibility;
                 overflow:hidden;
             }
-            header {
+            footer {
                 position:absolute; 
                 margin:0; 
                 background:rgba(0,0,0,.6); 
                 padding:12px 16px; 
-                top:0; 
+                bottom:0; 
                 left:0;
+                width:100%;
             }
             h1, h2 {
                 margin:0;
@@ -134,31 +135,36 @@ sub app {
             h2 {
                 font-weight:normal;
             }
+            article {
+                width:100%;
+            }
             article img {
                 border:none;
-                height:100%;
-                min-height:100%;
-                max-width:100%;
+                width:100%;
+                max-height:100%;
+                display:block;
             }
             a, a:link, a:visited, a:hover {
                 color:white;
                 text-decoration:none;
             }
         </style>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
         <meta http-equiv="refresh" content="15; URL=/">
         <meta name="description" content="Watch the animated GIFs from DevOpReactions/SecurityReactions/TheCodingLove in full-screen.">
         <meta name="author" content="Tobias Kremer/soulchild">
     </head>
     <body>
-        <header>
+        <article>
+            <img src="$reaction_image">
+        </article>
+        <footer>
             <a href="$reaction_url">
                 <h1>$reaction_no/$reaction_total: $reaction_title</h1>
                 <h2>from $reaction_feed</h2>
             </a>
-        </header>
-        <article>
-            <img src="$reaction_image">
-        </article>
+        </footer>
         <a href="https://github.com/soulchild"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
     </body>
 </html>

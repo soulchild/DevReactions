@@ -4,28 +4,27 @@ author:
   - 'Tobi Kremer, C<< <tobias at funkreich.de> >>'
   - 'Tobi Kremer <tobias@funkreich.de>'
 build_requires:
-  ExtUtils::MakeMaker: 6.59
-  Module::Install: 0
-  Test::More: 0
+  ExtUtils::MakeMaker: '6.59'
+  Module::Install: '0'
 configure_requires:
-  ExtUtils::MakeMaker: 6.59
-  Module::Install: 0
+  ExtUtils::MakeMaker: '6.59'
+  Module::Install: '0'
 dynamic_config: 0
-generated_by: 'Module::Install version 1.06, CPAN::Meta::Converter version 2.112150'
+generated_by: 'Module::Install version 1.06, CPAN::Meta::Converter version 2.120921'
 license: artistic_2
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
-  version: 1.4
+  version: '1.4'
 name: App-DevReactions
 no_index:
   directory:
     - inc
     - t
 requires:
-  perl: 5.006
-  XML::Feed: 0
-  Plack: 1.0000
+  Plack: '1.0000'
+  XML::Feed: '0'
+  perl: '5.008'
 resources:
   bugtracker: http://rt.cpan.org/NoAuth/Bugs.html?Dist=App-DevReactions
   license: http://www.perlfoundation.org/artistic_license_2_0
-version: 0.01
+version: '0.02'

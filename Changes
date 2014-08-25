@@ -1,5 +1,5 @@
 Revision history for App-DevReactions
 
-0.01    Date/time
-        First version, released on an unsuspecting world.
+0.02    Fixed regexp for https URLs and removed TheCodingLove because the RSS feed doesn't include the image URLs anymore :(
 
+0.01    First version, released on an unsuspecting world.

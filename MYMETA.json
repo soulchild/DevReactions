@@ -5,7 +5,7 @@
       "Tobi Kremer <tobias@funkreich.de>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Module::Install version 1.06, CPAN::Meta::Converter version 2.112150",
+   "generated_by" : "Module::Install version 1.06, CPAN::Meta::Converter version 2.120921",
    "license" : [
       "artistic_2"
    ],
@@ -24,21 +24,20 @@
       "build" : {
          "requires" : {
             "ExtUtils::MakeMaker" : "6.59",
-            "Module::Install" : 0,
-            "Test::More" : 0
+            "Module::Install" : "0"
          }
       },
       "configure" : {
          "requires" : {
             "ExtUtils::MakeMaker" : "6.59",
-            "Module::Install" : 0
+            "Module::Install" : "0"
          }
       },
       "runtime" : {
          "requires" : {
-            "perl" : "5.006",
-            "XML::Feed" : 0,
-            "Plack" : "1.0000"
+            "Plack" : "1.0000",
+            "XML::Feed" : "0",
+            "perl" : "5.008"
          }
       }
    },
@@ -51,5 +50,5 @@
          "http://www.perlfoundation.org/artistic_license_2_0"
       ]
    },
-   "version" : "0.01"
+   "version" : "0.02"
 }

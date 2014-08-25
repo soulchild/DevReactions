@@ -9,7 +9,7 @@ use Encode;
 use XML::Feed;
 use Plack::Request;
 
-our $VERSION = "0.01";
+our $VERSION = "0.02";
 
 =head1 NAME
 
@@ -17,7 +17,7 @@ App::DevReactions - Watch dev reactions animated GIFs in fullscreen
 
 =head1 VERSION
 
-Version 0.01
+Version 0.02
 
 =cut
 
@@ -26,19 +26,13 @@ my $feeds = [
         name        => 'DevOps Reactions',
         url         => 'http://devopsreactions.tumblr.com',
         feed_url    => 'http://devopsreactions.tumblr.com/rss',
-        regex       => qr|<img.*src="(http://.+?)"|,
+        regex       => qr|<img.+?src="(https?://.+?)"|,
     },
     {
         name        => 'Security Reactions',
         url         => 'http://securityreactions.tumblr.com',
         feed_url    => 'http://securityreactions.tumblr.com/rss',
-        regex       => qr|<img.*src="(http://.+?)"|,
-    },
-    {
-        name        => 'TheCodingLove',
-        url         => 'http://thecodinglove.com',
-        feed_url    => 'http://thecodinglove.com/rss',
-        regex       => qr|<img.*src="(http://.+?)"|,
+        regex       => qr|<img.+?src="(https?://.+?)"|,
     },
 ];
 

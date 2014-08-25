@@ -16,4 +16,7 @@ cpanm --installdeps .
 plackup
 ```
 
-Fire up your browser and go to: [http://localhost:5000](http://localhost:5000). If you're using Google Chrome, hit cmd+Shift+F for full-screen mode. Enjoy! :)
+Fire up your browser and go to: [http://localhost:5000](http://localhost:5000). If you're using Google Chrome, hit cmd+Shift+F for full-screen mode. 
+If you're on OS X, you might like [Websaver](https://code.google.com/p/websaver/), which let's you display a website (e.g. this app) as a screen-saver.
+
+Enjoy! :)
